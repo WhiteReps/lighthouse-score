@@ -26,7 +26,7 @@ const CategoryLink = React.memo(({ setFn, setSearch }) => {
     queryFn: fetchCategory,
     staleTime: 60 * 1000, // Cache data for 1 minute
   });
-  
+
   const handleCategory = useCallback(
     (id) => {
       setFn(id);
@@ -71,4 +71,5 @@ const CategoryLink = React.memo(({ setFn, setSearch }) => {
   );
 });
 
+CategoryLink.displayName = "CategoryLink";
 export default CategoryLink;
